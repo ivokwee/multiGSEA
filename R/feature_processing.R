@@ -353,8 +353,8 @@ getMultiOmicsFeatures <- function(dbs = c("all"), layer = c("all"),
   returnTranscriptome <- toupper(returnTranscriptome)
   returnProteome <- toupper(returnProteome)
   returnMetabolome <- toupper(returnMetabolome)
-  returnMetabolome <- if(returnMetabolome == "CHEBI") "ChEBI"
-  returnMetabolome <- if(returnMetabolome == "DRUGBANK") "Drugbank"
+  if(returnMetabolome == "CHEBI") returnMetabolome <- "ChEBI"
+  if(returnMetabolome == "DRUGBANK") returnMetabolome <- "Drugbank"
 
   ## check for the correct transcriptome mapping format
   supportedIDs <- c("SYMBOL", "ENTREZID", "UNIPROT", "ENSEMBL", "REFSEQ")
