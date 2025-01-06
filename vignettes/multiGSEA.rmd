@@ -6,7 +6,7 @@ author:
 - name: Jörg Hackermüller
   affiliation: Helmholtz-Centre for Environmental Research - UFZ, Leipzig, Germany
 package: multiGSEA
-date: "March 11, 2020"
+date: "Jan 06, 2025"
 output:
   BiocStyle::html_document:
     toc_float: true
@@ -48,6 +48,7 @@ GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84631), the proteome
 data from the [ProteomeXchange
 Consortium](http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD006293),
 and the non-targeted metabolome raw data can be found in the online supplement.
+Please note, this vignette focuses solely on the Actinonin data set.
 
 ## Installation
 
@@ -151,9 +152,11 @@ library(multiGSEA)
 library(magrittr)
 ```
 
-Load the omics data for each layer where an enrichment should be calculated.
-The example data is provided within the package and already preprocessed such
-that we have log2 transformed fold changes and their associated p-values.
+Load the omics data for each layer where an enrichment should be
+calculated.  The example data is provided within the package and
+already preprocessed such that we have log2 transformed fold changes
+and their associated p-values.  As mentioned previously, the vignette
+covers the Actinonin-treated data set from Quiros _et al._ [@Quiros:2017].
 
 ```{r load_omics_data}
 # load transcriptomic features
